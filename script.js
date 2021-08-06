@@ -11,9 +11,25 @@ for (var i=0; i<5 ;i++){
 
 if(verifica){
     document.getElementById("accesso_eseguito").innerHTML =  "Accesso eseguito con successo";
-}
-else{
+}else{
     document.getElementById("accesso_negato").innerHTML =  "Accesso fallito... email non riconosciuta";
 }
 
 
+let numeroGiocatore = Math.floor(Math.random() * 6) + 1;
+let numeroComputer = Math.floor(Math.random() * 6) + 1;
+document.getElementById("numero_giocatore").innerHTML = numeroGiocatore;
+document.getElementById("numero_computer").innerHTML = numeroComputer;
+
+let vincitore;
+
+if(numeroGiocatore > numeroComputer){
+    vincitore = "HAI VINTO!!";
+}else if(numeroGiocatore == numeroComputer){
+    vincitore = "PAREGGIO!!";
+}
+else{
+    vincitore = "HAI PERSO!!";
+}
+
+document.getElementById("vincitore").innerHTML = vincitore;
